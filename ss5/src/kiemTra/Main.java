@@ -67,7 +67,6 @@ public class Main {
                 case 3: ;
                     System.out.println("Nhập ID sản phẩm cần cập nhật: ");
                     int updateId = Integer.parseInt(sc.nextLine());
-                    Optional<>
                     break;
                 case 4:
                     ListProducts.stream().forEach( p -> {
