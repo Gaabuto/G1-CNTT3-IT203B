@@ -1,19 +1,21 @@
 package btvn.bai2;
 
+
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Bai2 {
-    static void main(String[] args) {
-        ArrayList<User> users = new ArrayList<>();
-            User user1 = new User("alice@gmal.com");
-            User user2 = new User("bob@yahoo.com");
-            User user3 = new User("Charlie@gmail.com");
-            users.add(user1);
-            users.add(user2);
-            users.add(user3);
-            users.stream()
-                    .filter(user -> user.email().toLowerCase().endsWith("@gmail.com"))
-                    .forEach(user -> System.out.println(user.email()));
+    public static void main(String[] args) {
+        List<String> emails = new ArrayList<>();
+        emails.add("alice@gmail.com");
+        emails.add("bob@yahoo.com");
+        emails.add("charlie@gmail.com");
 
+        emails
+                .stream()
+                .filter((email)-> email.endsWith("@gmail.com"))
+                .forEach(System.out::println);
     }
 }
+
